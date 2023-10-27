@@ -1,0 +1,189 @@
+{
+    "snacks": [
+      {
+        "id": 1,
+        "name": "Chocolate Chip Cookies",
+        "price": 1.5,
+        "availability": "yes"
+      },
+      {
+        "id": 2,
+        "name": "Potato Chips",
+        "price": 1.0,
+        "availability": "yes"
+      },
+      {
+        "id": 3,
+        "name": "Granola Bars",
+        "price": 2.0,
+        "availability": "yes"
+      },
+      {
+        "id": 4,
+        "name": "Fruit Salad",
+        "price": 2.5,
+        "availability": "yes"
+      },
+      {
+        "id": 5,
+        "name": "Mixed Nuts",
+        "price": 1.8,
+        "availability": "yes"
+      },
+      {
+        "id": 6,
+        "name": "Yogurt Parfait",
+        "price": 3.0,
+        "availability": "yes"
+      },
+      {
+        "id": 7,
+        "name": "Pretzels",
+        "price": 1.2,
+        "availability": "yes"
+      },
+      {
+        "id": 8,
+        "name": "Vegetable Sticks with Dip",
+        "price": 2.2,
+        "availability": "yes"
+      },
+      {
+        "id": 9,
+        "name": "Cheese and Crackers",
+        "price": 2.3,
+        "availability": "yes"
+      },
+      {
+        "id": 10,
+        "name": "Fruit Smoothie",
+        "price": 3.5,
+        "availability": "yes"
+      }
+    ],
+    "beverages": [
+        {
+          "id": 1,
+          "name": "Cola",
+          "price": 1.5,
+          "availability": "yes"
+        },
+        {
+          "id": 2,
+          "name": "Iced Tea",
+          "price": 1.2,
+          "availability": "yes"
+        },
+        {
+          "id": 3,
+          "name": "Coffee",
+          "price": 1.8,
+          "availability": "yes"
+        },
+        {
+          "id": 4,
+          "name": "Orange Juice",
+          "price": 2.0,
+          "availability": "yes"
+        },
+        {
+          "id": 5,
+          "name": "Lemonade",
+          "price": 1.7,
+          "availability": "yes"
+        },
+        {
+          "id": 6,
+          "name": "Mineral Water",
+          "price": 1.5,
+          "availability": "yes"
+        },
+        {
+          "id": 7,
+          "name": "Hot Chocolate",
+          "price": 2.2,
+          "availability": "yes"
+        },
+        {
+          "id": 8,
+          "name": "Smoothie",
+          "price": 2.5,
+          "availability": "yes"
+        },
+        {
+          "id": 9,
+          "name": "Milkshake",
+          "price": 2.3,
+          "availability": "yes"
+        },
+        {
+          "id": 10,
+          "name": "Latté",
+          "price": 2.8,
+          "availability": "yes"
+        }
+    ],
+    "desserts": [
+        {
+          "id": 1,
+          "name": "Chocolate Cake",
+          "price": 3.0,
+          "availability": "yes"
+        },
+        {
+          "id": 2,
+          "name": "Apple Pie",
+          "price": 2.5,
+          "availability": "yes"
+        },
+        {
+          "id": 3,
+          "name": "Cheesecake",
+          "price": 3.2,
+          "availability": "yes"
+        },
+        {
+          "id": 4,
+          "name": "Ice Cream Sundae",
+          "price": 2.8,
+          "availability": "yes"
+        },
+        {
+          "id": 5,
+          "name": "Fruit Tart",
+          "price": 3.5,
+          "availability": "yes"
+        },
+        {
+          "id": 6,
+          "name": "Brownie",
+          "price": 2.0,
+          "availability": "yes"
+        },
+        {
+          "id": 7,
+          "name": "Cupcakes",
+          "price": 2.2,
+          "availability": "yes"
+        },
+        {
+          "id": 8,
+          "name": "Tiramisu",
+          "price": 3.3,
+          "availability": "yes"
+        },
+        {
+          "id": 9,
+          "name": "Lemon Tart",
+          "price": 2.7,
+          "availability": "yes"
+        },
+        {
+          "id": 10,
+          "name": "Red Velvet Cake",
+          "price": 3.2,
+          "availability": "yes"
+        }
+      ]
+  }
+  
