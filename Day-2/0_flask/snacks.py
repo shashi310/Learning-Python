@@ -73,6 +73,48 @@ class SnackInventory:
         for snack in self.snacks:
             print(f"ID: {snack.id}, Name: {snack.name}, Price: ${snack.price}, Availability: {snack.availability}")
 
+# specifically for level 2
+
+
+    def display_menu(self):
+        print("Welcome to Mumbai Munchies Canteen!")
+        print("1. Display Snacks Inventory")
+        print("2. Sell Snack")
+        print("3. Add Snack")
+        print("4. Remove Snack")
+        print("5. Update Availability")
+        print("6. Exit")
+
+    def run(self):
+        while True:
+            self.display_menu()
+            choice = input("Enter your choice (1-6): ")
+
+            if choice == '1':
+                self.display_snacks()
+            elif choice == '2':
+                snack_id = int(input("Enter the ID of the snack you want to sell: "))
+                self.sell_snack(snack_id)
+            elif choice == '3':
+                id = int(input("Enter ID for the new snack: "))
+                name = input("Enter name for the new snack: ")
+                price = float(input("Enter price for the new snack: "))
+                availability = input("Enter availability for the new snack (yes/no): ")
+                new_snack = Snack(id, name, price, availability)
+                self.add_snack(new_snack)
+            elif choice == '4':
+                snack_id = int(input("Enter the ID of the snack you want to remove: "))
+                self.remove_snack(snack_id)
+            elif choice == '5':
+                snack_id = int(input("Enter the ID of the snack you want to update: "))
+                new_availability = input("Enter new availability for the snack (yes/no): ")
+                self.update_availability(snack_id, new_availability)
+            elif choice == '6':
+                print("Thank you for using Mumbai Munchies Canteen System!")
+                break
+            else:
+                print("Invalid input. Please enter a number between 1 and 6.")
+
 # Sample Usage
 # Create an instance of the 'SnackInventory' class.
 inventory = SnackInventory()
@@ -90,13 +132,17 @@ inventory.add_snack(snack3)
 # inventory.update_availability(1, "no")
 
 # Display the current status of all snacks in the inventory.
-inventory.display_snacks()
-inventory.sell_snack(3)
-inventory.display_snacks()
+# inventory.display_snacks()
+# inventory.sell_snack(3)
+# inventory.display_snacks()
 
 
 
 
 
 
-# -------------------------------------------------------------------
+# -------------------------------------------------------------------lv 2
+
+# Sample Usage
+inventory = SnackInventory()
+inventory.run()
