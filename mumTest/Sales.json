@@ -1,0 +1,52 @@
+{
+    "1031": {
+        "billId": "1031",
+        "items with quantity": [
+            {
+                "samosa": 1
+            },
+            {
+                "pasta": 1
+            }
+        ],
+        "bill": 70,
+        "date": "9/10/23",
+        "payment": "cash"
+    },
+    "2521": {
+        "billId": "2521",
+        "items with quantity": [
+            {
+                "samosa": 2
+            }
+        ],
+        "date": "27/10/2023",
+        "payment": "cash",
+        "bill": 40
+    },
+    "6054": {
+        "billId": "6054",
+        "items with quantity": [
+            {
+                "samosa": 1
+            },
+            {
+                "pasta": 1
+            }
+        ],
+        "date": "27/10/2023",
+        "payment": "upi",
+        "bill": 70
+    },
+    "3616": {
+        "billId": "3616",
+        "items with quantity": [
+            {
+                "samosa": 2
+            }
+        ],
+        "date": "27/10/2023",
+        "payment": "cash",
+        "bill": 40
+    }
+}

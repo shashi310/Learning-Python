@@ -1,0 +1,26 @@
+{
+    "001": {
+        "id": "001",
+        "name": "samosa",
+        "price": 20,
+        "available": "No"
+    },
+    "002": {
+        "id": "002",
+        "name": "meggie",
+        "price": 30,
+        "available": "No"
+    },
+    "003": {
+        "id": "003",
+        "name": "dabeli",
+        "price": 25,
+        "available": "Yes"
+    },
+    "004": {
+        "id": "004",
+        "name": "pasta",
+        "price": 50,
+        "available": "Yes"
+    }
+}
