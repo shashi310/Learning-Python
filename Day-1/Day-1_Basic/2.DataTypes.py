@@ -15,12 +15,16 @@ boolean_variable = True
 
 # List
 list_variable = [1, 2, 3, 4, 5]
+# A list is mutable, meaning its elements can be modified after creation.
+
 
 # Tuple
 tuple_variable = (6, 7, 8, 9, 10)
+# A tuple is immutable, meaning its elements cannot be changed after creation.
 
 # Dictionary
 dictionary_variable = {'a': 1, 'b': 2, 'c': 3}
+# A dictionary is a collection of key-value pairs, where each key is unique and used to access its corresponding value.
 
 # Set
 set_variable = {1, 2, 3, 4, 5}
