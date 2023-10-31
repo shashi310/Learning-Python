@@ -1,0 +1,22 @@
+[
+    {"id": 1,
+    "customerName": "John Doe",
+    "dishIDs": [1,2,3],
+    "status": "received"
+    },
+    {"id": 2, 
+    "customerName": "Jane Doe", 
+    "dishIDs": [3], 
+    "status": "preparing"
+    },
+    {"id": 3, 
+    "customerName": "Tony Starn", 
+    "dishIDs": [2,3], 
+    "status": "ready for pickup"
+    },
+    {"id": 4, 
+    "customerName": "Steve Rogers", 
+    "dishIDs": [4], 
+    "status": "delivered"
+    }
+]
