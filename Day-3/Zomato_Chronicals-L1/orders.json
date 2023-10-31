@@ -1,22 +1,63 @@
 [
-    {"id": 1,
-    "customerName": "John Doe",
-    "dishIDs": [1,2,3],
-    "status": "received"
+    {
+        "id": 1,
+        "customerName": "John Doe",
+        "dishIDs": [
+            1,
+            2,
+            3
+        ],
+        "status": "received"
     },
-    {"id": 2, 
-    "customerName": "Jane Doe", 
-    "dishIDs": [3], 
-    "status": "preparing"
+    {
+        "id": 2,
+        "customerName": "Jane Doe",
+        "dishIDs": [
+            3
+        ],
+        "status": "preparing"
     },
-    {"id": 3, 
-    "customerName": "Tony Starn", 
-    "dishIDs": [2,3], 
-    "status": "ready for pickup"
+    {
+        "id": 3,
+        "customerName": "Tony Starn",
+        "dishIDs": [
+            2,
+            3
+        ],
+        "status": "ready for pickup"
     },
-    {"id": 4, 
-    "customerName": "Steve Rogers", 
-    "dishIDs": [4], 
-    "status": "delivered"
+    {
+        "id": 4,
+        "customerName": "Steve Rogers",
+        "dishIDs": [
+            4
+        ],
+        "status": "delivered"
+    },
+    {
+        "id": 5,
+        "customerName": "Dr strange",
+        "dishIDs": [
+            2,
+            3
+        ],
+        "status": "preparing"
+    },
+    {
+        "id": 6,
+        "customerName": "jarvis",
+        "dishIDs": [
+            1
+        ],
+        "status": "received"
+    },
+    {
+        "id": 7,
+        "customerName": "peter parker",
+        "dishIDs": [
+            2,
+            3
+        ],
+        "status": "preparing"
     }
 ]
