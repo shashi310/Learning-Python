@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Pizza",
+        "price": 10,
+        "available": true,
+        "feedback": [
+            {
+                "rating": 4.1,
+                "comment": "fabulous"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Burger",
+        "price": 8,
+        "available": true,
+        "feedback": [
+            {
+                "rating": 4.4,
+                "comment": "nice"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Pasta",
+        "price": 12,
+        "available": true
+    },
+    {
+        "id": 4,
+        "name": "samosa",
+        "price": 20,
+        "available": true
+    }
+]
