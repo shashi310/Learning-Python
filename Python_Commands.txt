@@ -1,0 +1,15 @@
+1----------------command to setup a  Virtual Environment in Python--------
+
+python -m venv C:\Users\shash\Desktop\Python\Day-4_Flask\Intro_To_Flask _L1\venv
+
+
+2-now navigate to the folder which contains venv file and then hit command 
+
+venv\Scripts\activate
+
+
+2.1------ now you can start ----like   (pip install flask)
+
+
+3-once done ----deactivate
+
