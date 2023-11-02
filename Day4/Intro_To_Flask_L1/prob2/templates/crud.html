@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script>
+        function showSection(sectionId) {
+            var sections = ['create-section', 'read-section', 'update-section', 'delete-section'];
+            for (var i = 0; i < sections.length; i++) {
+                var section = document.getElementById(sections[i]);
+                if (sections[i] == sectionId) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+        }
+        window.onload = function() {
+            showSection('read-section');
+          
+        }
+    </script>
+</head>
+<body>
+    <h1>CRUD Operations with Flask</h1>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <button onclick="showSection('create-section')">Create</button>
+        <button onclick="showSection('read-section')">Read</button>
+        <button onclick="showSection('update-section')">Update</button>
+        <button onclick="showSection('delete-section')">Delete</button>
+    </div>
+
+    <!-- Create Section -->
+    <div id="create-section" class="operation-section">
+        <h2>Create</h2>
+        <form action="/crud" method="post">
+            <input type="hidden" name="action" value="create">
+            Key: <input type="text" name="key"><br>
+            Value: <input type="text" name="value"><br>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+
+    <!-- Read Section -->
+    <div id="read-section" class="operation-section">
+        <h2>Read</h2>
+        <!-- <a href="/crud?action=read">Read Data</a> -->
+        <button onclick="readData()">Read Data</button>
+        <div id="read-result"></div>
+       
+    </div>
+
+    <!-- Update Section -->
+    <div id="update-section" class="operation-section">
+        <h2>Update</h2>
+        <form action="/crud" method="post">
+            <input type="hidden" name="action" value="update">
+            Key: <input type="text" name="key"><br>
+            New Value: <input type="text" name="value"><br>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+    <!-- Delete Section -->
+    <div id="delete-section" class="operation-section">
+        <h2>Delete</h2>
+        <form action="/crud" method="post">
+            <input type="hidden" name="action" value="delete">
+            Key: <input type="text" name="key"><br>
+            <input type="submit" value="Delete">
+        </form>
+    </div>
+
+</body>
+</html>
+<script>
+    function readData() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/crud?action=read", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById("read-result").innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    }
+</script>
