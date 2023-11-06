@@ -39,3 +39,35 @@
 # Submission:
 
 # Submit your code along with comprehensive test cases that demonstrate your implementation meets the stated requirements and bonus tasks (if attempted). Ensure your submission is well-documented, maintainable, and adheres to best practices in Flask development and TDD.
+
+
+from flask import Flask, jsonify,request
+
+app=Flask(__name__)
+
+posts=[]
+
+@app.route('/posts',methods=['POST'])
+def create_post():
+    data=request.get.json()
+    userName=data.get('userName')
+    captions=data.get('captions')
+    post={'userName':userName, 'captions':captions}
+    posts.append(post)
+    return jsonify({'messages':'New post created'})
+
+@app.route('/posts',methods=['GET'])
+def get_posts():
+    return jsonify({"posts":posts})
+
+
+@app.route('/posts/<int:post_id>',methods=['DELETE'])
+def delete_post(post_id):
+    for post in posts:
+        if post['id'] == post_id:
+            posts.remove(post)
+            return jsonify({'messages':'post deleted'}) 
+    return jsonify({'messages':'post not found'}) 
+
+if __name__ == '__main__':
+    app.run(debug=True)

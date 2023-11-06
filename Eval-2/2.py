@@ -12,7 +12,7 @@
 
 
 def allocate_projects(employees,projects):
-    assignment = []
+    task = []
     for project in projects:
         project_name=project["name"]
         project_skills=set(project["skills"])
@@ -21,9 +21,9 @@ def allocate_projects(employees,projects):
                 employee_skills=set(employee["skills"])
                 if project_skills.issubset(employee_skills):
                     employee["current_project"]=project_name
-                    assignment.append({"employee":employee["name"], "project":project_name})
+                    task.append({"employee":employee["name"], "project":project_name})
                     break
-    return assignment
+    return task
 
 employees=[
     {"name":"john","skills":["python","Database"],"current_project":None},
