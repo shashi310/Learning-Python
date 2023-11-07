@@ -13,3 +13,6 @@ venv\Scripts\activate
 
 3-once done ----deactivate
 
+--pytest---
+1-pip install pytest
+2-python -m pytest tests/test_menu.py
