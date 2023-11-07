@@ -11,17 +11,17 @@ weather_data = {
 
 
 
-@app.route("/welcome", methods=['GET'])
+@app.route("/", methods=['GET'])
 def welcome():
-    return jsonify({"message": "welcome to weather app!"})
+    return jsonify({"message": "welcome to the backend of  weather app!"})
 
 
 @app.route("/weather/<string:city>")
 def weather(city):
     if city in weather_data:
-        return jsonify({"message": "City Data", "data": weather_data[city]})
+        return jsonify({"Weather_data": weather_data[city]})
     else:
-        return jsonify({"message": "City not found"}, 400)
+        return jsonify({"message": "Invalid city"})
 
 
 @app.route("/weather", methods=['POST'])

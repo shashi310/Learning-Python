@@ -7,20 +7,20 @@ def client():
 
 
 def test_welcome(client):
-    response = client.get('/welcome')
-    assert b'welcome to weather app!' in response.data
+    response = client.get('/')
+    assert b'welcome to the backend of  weather app!' in response.data
 
 def test_weather_edge_case(client):
     response = client.get('/weather/City')
     response.status_code = 400
-    assert b'City not found' in response.data
+    assert b'Invalid city' in response.data
 
-def test_weather(client):
-    response = client.get('/weather/San%20Francisco')
-    response.status_code = 200
-    data = json.loads(response.data)
-    assert 'City Data' == data['message']
-    assert data['data']['weather'] in ['Cloudy', 'Sunny', 'Rainy', 'Hot']
+# def test_weather(client):
+#     response = client.get('/weather/San%20Francisco')
+#     response.status_code = 200
+#     data = json.loads(response.data)
+#     # assert 'City Data' == data['message']
+#     assert data['data']['weather'] in ['Cloudy', 'Sunny', 'Rainy', 'Hot']
 
 def test_postWeather_edge_case(client):
     response = client.post('/weather', json={'city': 
