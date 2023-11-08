@@ -1,0 +1,93 @@
+
+
+Problem: Create a Customers table / collection with the following fields: id (unique identifier), name, email, address, and phone_number.
+
+CREATE TABLE Customers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255),
+  address VARCHAR(255),
+  phone_number VARCHAR(15)
+);
+
+-------------------------------------------
+**Problem 2:**
+
+- **Prerequisite**: Understand inserting data into SQL tables / MongoDB collections
+- **Problem**: Insert five rows / documents into the **`Customers`** table / collection with data of your choice.
+
+INSERT INTO Customers (name, email, address, phone_number)
+VALUES 
+  ('John Doe', 'john.doe@example.com', '123 Main Street, Cityville', '555-1234'),
+  ('Jane Smith', 'jane.smith@example.com', '456 Oak Avenue, Townsville', '555-5678'),
+  ('Bob Johnson', 'bob.johnson@example.com', '789 Elm Drive, Villagetown', '555-9012'),
+  ('Sarah Davis', 'sarah.davis@example.com', '101 Pine Road, Hamletville', '555-3456'),
+  ('Michael Wilson', 'michael.wilson@example.com', '202 Maple Lane, Countryside', '555-7890'),
+  ('Emma Brown', 'emma.brown@example.com', '303 Cedar Court, Villageville', '555-2345');
+-----------------------------------------------
+**Problem 3:**
+
+- **Prerequisite**: Understand basic data fetching in SQL / MongoDB
+- **Problem**: Write a query to fetch all data from the **`Customers`** table / collection.
+
+SELECT * FROM Customers;
+------------------------------------------------
+Write a query to select only the name and email fields for all customers.
+
+SELECT name, email FROM Customers;
+
+-------------------------------------------
+Write a query to fetch the customer with the id of 3.
+SELECT * FROM Customers WHERE id = 3;
+
+
+------------------------------------------
+ Write a query to fetch all customers whose **`name`** starts with 'A'.
+SELECT * FROM Customers WHERE name LIKE 'A%';
+
+------------------------------------------------
+Write a query to fetch all customers, ordered by name in descending order.
+SELECT * FROM Customers ORDER BY name DESC;
+
+-------------------------------------------------
+
+ Write a query to update the address of the customer with id 4.
+UPDATE Customers
+SET address = 'New Address'
+WHERE id = 4;
+------------------------------------------------
+Write a query to fetch the top 3 customers when ordered by id in ascending order.
+SELECT * FROM Customers
+ORDER BY id
+LIMIT 3;
+-----------------------------------------------------
+Write a query to delete the customer with id 2.
+DELETE FROM Customers
+WHERE id = 2;
+------------------------------------------------------
+Write a query to count the number of customers.
+SELECT COUNT(*) as customer_count FROM Customers;
+-------------------------------------------------------
+
+Write a query to fetch all customers except the first two when ordered by id in ascending order.
+
+SELECT * FROM Customers
+ORDER BY id ASC
+OFFSET 2;
+------------------------------------------------------------
+Write a query to fetch all customers whose id is greater than 2 and name starts with 'B'.
+
+SELECT * FROM Customers
+WHERE id > 2 AND name LIKE 'B%';
+-----------------------------------------------------------bug------------
+
+Write a query to fetch all customers whose id is less than 3 or name ends with 's'.
+SELECT * FROM Customers
+WHERE id < 3 OR name LIKE '%s';
+-------------------------------------------------------
+Write a query to fetch all customers where the phone_number field is not set or is null.
+
+SELECT * FROM Customers
+WHERE phone_number IS NULL OR phone_number = '';
+
+
