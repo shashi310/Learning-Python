@@ -1,0 +1,69 @@
+userData- db
+-----------------------------------------
+- Create a **`Restaurants`** table / collection with the fields defined above.
+CREATE TABLE Restaurants (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    cuisine_type VARCHAR(100),
+    location VARCHAR(255),
+    average_rating DECIMAL(3,2),
+    delivery_available BOOLEAN
+);
+
+
+-------------------------------------------
+Insert five rows / documents into the Restaurants table / collection with data of your choice.
+
+INSERT INTO Restaurants (id, name, cuisine_type, location, average_rating, delivery_available)
+VALUES 
+  (1, 'The Spicy Bistro', 'Indian', 'New York', 4.5, true),
+  (2, 'La Pizzeria', 'Italian', 'Los Angeles', 4.2, true),
+  (3, 'Sushi Palace', 'Japanese', 'San Francisco', 4.8, true),
+  (4, 'Taco Haven', 'Mexican', 'Austin', 4.0, false),
+  (5, 'Mediterranean Delight', 'Mediterranean', 'Miami', 4.3, true);
+
+---------------------------------------------------
+ Write a query to fetch all restaurants, ordered by average_rating in descending order.
+SELECT *, (rating / 2) AS average_rating
+FROM Restaurants
+ORDER BY average_rating DESC;
+
+-------------------------------------------------
+=================================================
+-- Drop the existing table if it exists
+DROP TABLE IF EXISTS Restaurants;
+
+---------------------------------------------------
+Write a query to fetch all restaurants that offer delivery_available and have an average_rating of more than 4.
+SELECT * FROM Restaurants
+WHERE delivery_available = true AND average_rating > 4;
+
+-----------------------------------------------------------
+Write a query to fetch all restaurants where the cuisine_type field is not set or is null.
+SELECT * FROM Restaurants
+WHERE cuisine_type IS NULL OR cuisine_type = '';
+
+
+-----------------------------------------------------------
+Write a query to count the number of restaurants that have delivery_available.
+SELECT COUNT(*) as delivery_restaurant_count FROM Restaurants WHERE delivery_available = true;
+
+-----------------------------------------------------
+Write a query to fetch all restaurants whose location contains 'New York'.
+SELECT * FROM Restaurants
+WHERE location LIKE '%New York%';
+
+======================================================
+Write a query to calculate the average average_rating of all restaurants.
+SELECT AVG(average_rating) as average_average_rating FROM Restaurants;
+=========================================================
+Write a query to fetch the top 5 restaurants when ordered by average_rating in descending order.
+SELECT * FROM Restaurants
+ORDER BY average_rating DESC
+LIMIT 5;
+
+==============================================================
+Write a query to delete the restaurant with id 3.
+DELETE FROM Restaurants
+WHERE id = 3;
+
