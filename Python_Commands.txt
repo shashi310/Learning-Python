@@ -2,6 +2,7 @@
 
 python -m venv C:\Users\shash\Desktop\Python\Day-4_Flask\Intro_To_Flask _L1\venv
 
+python -m venv {path}\venv
 
 2-now navigate to the folder which contains venv file and then hit command 
 

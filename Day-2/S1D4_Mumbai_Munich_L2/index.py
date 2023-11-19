@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 # Define a class named 'Snack' to represent individual snacks.
 class Snack:
     # Constructor method. It initializes the attributes of the snack.
@@ -23,6 +26,7 @@ class SnackInventory:
     # Constructor method. Initialize an empty list to store snacks.
     def __init__(self):
         self.snacks = []
+        self.sales_records = []  # Initialize an empty list for sales records
 
     #1- Method to add a snack to the inventory.
     def add_snack(self, snack):
@@ -62,11 +66,30 @@ class SnackInventory:
         print(f"No snack found with ID {snack_id}.")
 
     #5- Method to record the sale of a snack. it will generate a file for the sold snacks
+    # def record_sale(self, snack):
+    #     with open("sales_records.txt", "a") as file:
+    #         file.write(f"Snack ID: {snack.id}, Name: {snack.name}, Price: {snack.price}\n")
+
     def record_sale(self, snack):
-        with open("sales_records.txt", "a") as file:
-            file.write(f"Snack ID: {snack.id}, Name: {snack.name}, Price: {snack.price}\n")
+        sale_info = f"Snack ID: {snack.id}, Name: {snack.name}, Price: {snack.price}, Sale Time: {datetime.now()}\n"
+        self.sales_records.append(sale_info)
     
-   
+       # Method to generate a sales report for a given period (daily/monthly).
+    def generate_sales_report(self, period='daily'):
+        if period == 'daily':
+            today = datetime.now().date()
+            daily_sales = [record for record in self.sales_records if str(today) in record]
+            print(f"Daily Sales Report ({today}):")
+            for sale in daily_sales:
+                print(sale)
+        elif period == 'monthly':
+            current_month = datetime.now().strftime('%Y-%m')
+            monthly_sales = [record for record in self.sales_records if current_month in record]
+            print(f"Monthly Sales Report ({current_month}):")
+            for sale in monthly_sales:
+                print(sale)
+        else:
+            print("Invalid period. Please choose 'daily' or 'monthly'.")
    
     
 
@@ -92,9 +115,13 @@ inventory.add_snack(snack3)
 
 # Display the current status of all snacks in the inventory.
 inventory.display_snacks()
-# inventory.sell_snack(3)
-# inventory.display_snacks()
+inventory.sell_snack(3)
+inventory.display_snacks()
 
+# Generate sales reports for daily and monthly periods.
+
+inventory.generate_sales_report('daily')
+inventory.generate_sales_report('monthly')
 
 
 
